@@ -1,12 +1,15 @@
 MACHINE IP: 10.10.72.144
 
 NMAP SCAM RESULTS: 
+
 21/tcp   open     ftp            vsftpd 3.0.3
+
 22/tcp   open     ssh            OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
 | ssh-hostkey: 
 |   2048 c9:03:aa:aa:ea:a9:f1:f4:09:79:c0:47:41:16:f1:9b (RSA)
 |   256 2e:1d:83:11:65:03:b4:78:e9:6d:94:d1:3b:db:f4:d6 (ECDSA)
 |_  256 91:3d:e4:4f:ab:aa:e2:9e:44:af:d3:57:86:70:bc:39 (ED25519)
+
 80/tcp   open     http           Apache httpd 2.4.29 ((Ubuntu))
 
 
@@ -26,6 +29,7 @@ TASK 1 "THE MANSION":
   emblem{fec832623ea498e20bf4fe1821d58727}
 
   ALSO THERE IS A HINT ON THE EMBLEM PAGE
+     
      emblem{fec832623ea498e20bf4fe1821d58727}
 
      Look like you can put something on the emblem slot, refresh / diningRoom/
@@ -38,6 +42,7 @@ TASK 1 "THE MANSION":
  TEA ROOM:
     Barry give Jill a Lockpick.
     HERE'S OUR LOCKPICK FLAG
+    
     lock_pick{037b35e2ff90916a9abf99129c8e1837}
 
     Barry also suggested that Jill should visit the /artRoom/
@@ -65,7 +70,7 @@ TASK 1 "THE MANSION":
      After decoding we get music sheet flag!
      music_sheet{362d72deaf65f5bdc63daece6a1f676e} 
      
-     ENTERING THE MUSIC SHEET FLAG IN THE BAR ROOM GIVEN SPACE
+ ENTERING THE MUSIC SHEET FLAG IN THE BAR ROOM GIVEN SPACE
  SECRET BAR ROOM
 
      WE ENTER INTO A SECRET BAR ROOM!
@@ -85,7 +90,7 @@ klfvg ks r wimgnd biz mpuiui ulg fiemok tqod. Xii jvmc tbkg ks tempgf tyi_hvgct_
  DECODING IT GIVES US;
  there is a shield key inside the dining room. The html page is called the_great_shield_key
 
- shield_key{48a7a9227cd7eb89f0a062590798cbac}
+    shield_key{48a7a9227cd7eb89f0a062590798cbac}
 
 
  DINING ROOM 2F:
@@ -94,7 +99,8 @@ klfvg ks r wimgnd biz mpuiui ulg fiemok tqod. Xii jvmc tbkg ks tempgf tyi_hvgct_
       After decoding u get 
       You get the blue gem by pushing the status to the lower floor. The gem is on the diningRoom first floor. Visit sapphire.html 
       add sapphire.html in diningRoom url
-      blue_jewel{e1d457e96cac640f863ec7bc475d48aa} 
+             
+             blue_jewel{e1d457e96cac640f863ec7bc475d48aa} 
  
  TIGER STATUS ROOM;
      Enter the blue jewel flag and then :
@@ -108,9 +114,7 @@ klfvg ks r wimgnd biz mpuiui ulg fiemok tqod. Xii jvmc tbkg ks tempgf tyi_hvgct_
   The above hash is base64 after decoding we get
   KJWFEUKJJBLHUWSYJE3ESRY=  
 
-  The above hash is base 32 and after decoding it we get a base 64 hash: RlRQIHVzZXI6IG
-
-  Decoding this we get :  FTP User:
+  The above hash is base 32 and after decoding it we get a base 64 hash: RlRQIHVzZXI6I
 
   
  
@@ -151,11 +155,12 @@ The combination should be crest 1 + crest 2 + crest 3 + crest 4. Also, the combi
        Note: You need to collect all 4 crests, combine and decode to reavel another path
        The combination should be crest 1 + crest 2 + crest 3 + crest 4. Also, the combination is a type of encoded base and you need to decode it
        
-       That's a base58 hash
-       after decoding u get hex
+   That's a base58 hash
+   after decoding u get hex
        70 5a 47 56 66 5a 6d 39 79 5a 58 5a 6c 63 67 3d 3d
        hex to ASCII gives us:
-        pZGVfZm9yZXZlcg==
+         
+         pZGVfZm9yZXZlcg==
 
  Combining all 4 crests:
 
@@ -175,7 +180,7 @@ The combination should be crest 1 + crest 2 + crest 3 + crest 4. Also, the combi
      
   Downloading the key files
       use exiftool 
-      key2:5fYmVfZGVzdHJveV9
+      key2: 5fYmVfZGVzdHJveV9
 
       Use steghide in Key 1 image and extract data without any passwd:
       cGxhbnQ0Ml9jYW
@@ -192,6 +197,7 @@ The combination should be crest 1 + crest 2 + crest 3 + crest 4. Also, the combi
   
   To extract helmet flag use:  gpg -d helmet_key.txt.gpg 
       enter the above decoded passphrase
+      
       helmet_key{458493193501d2b94bbab2e727f8db4b}
 
    Now go to the study room:
@@ -209,6 +215,7 @@ The combination should be crest 1 + crest 2 + crest 3 + crest 4. Also, the combi
 
   After connecting via SSH go to jailcell dir
   cat chris.txt
+         
          Jill: Chris, is that you?
          Chris: Jill, you finally come. I was locked in the Jail cell for a while. It seem that weasker is behind all this.
          Jil, What? Weasker? He is the traitor?
@@ -221,7 +228,8 @@ The combination should be crest 1 + crest 2 + crest 3 + crest 4. Also, the combi
  
  wpbwbxr wpkzg pltwnhro, txrks_xfqsxrd_bvv_fy_rvmexa_ajk
  Decode this vigenre cipher the key is Albert
-  weasker login password, stars_members_are_my_guinea_pig
+  
+      weasker login password, stars_members_are_my_guinea_pig
 
   Go to weasker profile 
   and read the note
@@ -232,6 +240,7 @@ The combination should be crest 1 + crest 2 + crest 3 + crest 4. Also, the combi
 
    We are root now
       cat root.txt
+       
        FLAG!
        3c5794a00dc56c35f2bf096571edf3bf  
     

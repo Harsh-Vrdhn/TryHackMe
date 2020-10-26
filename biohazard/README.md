@@ -237,8 +237,7 @@ The combination should be crest 1 + crest 2 + crest 3 + crest 4. Also, the combi
    Weasker has all the permissions
       run sudo -i
 
-   You are root now
-      cat root.txt
+   You are root now!
        
        FLAG!
        3c5794a00dc56c35f2bf096571edf3bf  

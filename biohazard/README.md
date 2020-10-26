@@ -51,7 +51,8 @@ TASK 1 "THE MANSION":
 
  MANSION MAP:
       Location:
-     /diningRoom/
+      
+      /diningRoom/
       /teaRoom/
       /artRoom/
       /barRoom/

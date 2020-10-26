@@ -4,33 +4,30 @@ NMAP SCAM RESULTS:
 
 21/tcp   open     ftp            vsftpd 3.0.3
 
-22/tcp   open     ssh            OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
-| ssh-hostkey: 
-|   2048 c9:03:aa:aa:ea:a9:f1:f4:09:79:c0:47:41:16:f1:9b (RSA)
-|   256 2e:1d:83:11:65:03:b4:78:e9:6d:94:d1:3b:db:f4:d6 (ECDSA)
-|_  256 91:3d:e4:4f:ab:aa:e2:9e:44:af:d3:57:86:70:bc:39 (ED25519)
+22/tcp   open      ssh            OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
 
 80/tcp   open     http           Apache httpd 2.4.29 ((Ubuntu))
 
 
 
 TASK 1 "THE MANSION":
+
    Chris is missing
    Jill try to open the door but stopped by Weasker
    a gunshot can be heard in the nearby room
    Weaker order Jill to make an investigate on the gunshot. 
    Check source code its the /diningRoom
  
- DINING ROOM;
+ DINING ROOM:
+ 
   Jill and Barry started their investigation
   Blood stein can be found near the fireplace
   Jill can't find any empty shell
-  There is a link in embedded which will give u emblem flag
-  emblem{fec832623ea498e20bf4fe1821d58727}
+  There is a link embedded which will give you emblem flag
+  
+   emblem{fec832623ea498e20bf4fe1821d58727}
 
   ALSO THERE IS A HINT ON THE EMBLEM PAGE
-     
-     emblem{fec832623ea498e20bf4fe1821d58727}
 
      Look like you can put something on the emblem slot, refresh / diningRoom/
 
@@ -94,10 +91,10 @@ klfvg ks r wimgnd biz mpuiui ulg fiemok tqod. Xii jvmc tbkg ks tempgf tyi_hvgct_
 
 
  DINING ROOM 2F:
-      VIEW THE SOURCE CODE
+      VIEW THE SOURCE CODE.
       Theres a ROT 13 encoded text
-      After decoding u get 
-      You get the blue gem by pushing the status to the lower floor. The gem is on the diningRoom first floor. Visit sapphire.html 
+      After decoding you get:
+      "You get the blue gem by pushing the status to the lower floor. The gem is on the diningRoom first floor. Visit sapphire.html" 
       add sapphire.html in diningRoom url
              
              blue_jewel{e1d457e96cac640f863ec7bc475d48aa} 
@@ -126,7 +123,7 @@ klfvg ks r wimgnd biz mpuiui ulg fiemok tqod. Xii jvmc tbkg ks tempgf tyi_hvgct_
       Note: You need to collect all 4 crests, combine and decode to reavel another path
       The combination should be crest 1 + crest 2 + crest 3 + crest 4. Also, the        combination is a type of encoded base and you need to decode it.
        
-       decode using base 32 an then base64 u get:
+       decode using base 32 an then base64 you get:
        h1bnRlciwgRlRQIHBh
   
  ARMOR ROOM: 
@@ -156,7 +153,7 @@ The combination should be crest 1 + crest 2 + crest 3 + crest 4. Also, the combi
        The combination should be crest 1 + crest 2 + crest 3 + crest 4. Also, the combination is a type of encoded base and you need to decode it
        
    That's a base58 hash
-   after decoding u get hex
+   after decoding you get hex
        70 5a 47 56 66 5a 6d 39 79 5a 58 5a 6c 63 67 3d 3d
        hex to ASCII gives us:
          
@@ -190,9 +187,9 @@ The combination should be crest 1 + crest 2 + crest 3 + crest 4. Also, the combi
        
        key3: 3aXRoX3Zqb2x0
  
- Combining key 1,2 & 3 we get
+ Combining key 1,2 & 3 you get:
       cGxhbnQ0Ml9jYW5fYmVfZGVzdHJveV93aXRoX3Zqb2x0
-      Decoding this base64 we get:
+      Decoding this base64 you get:
       plant42_can_be_destroy_with_vjolt
   
   To extract helmet flag use:  gpg -d helmet_key.txt.gpg 
@@ -202,7 +199,7 @@ The combination should be crest 1 + crest 2 + crest 3 + crest 4. Also, the combi
 
    Now go to the study room:
        Enter the helmet flag and then 
-       u have to download a file and u will get 
+       you have to download a file and you will get 
        SSH user: umbrella_guest
   
   HIDDEN CLOSET:
@@ -238,7 +235,7 @@ The combination should be crest 1 + crest 2 + crest 3 + crest 4. Also, the combi
    Weasker has all the permissions
       run sudo -i
 
-   We are root now
+   You are root now
       cat root.txt
        
        FLAG!

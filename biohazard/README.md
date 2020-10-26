@@ -31,10 +31,11 @@ TASK 1 "THE MANSION":
 
      Look like you can put something on the emblem slot, refresh / diningRoom/
 
-   IN THE SOURCECODE OF DINING ROOM THERE IS A HASH 
-   SG93IGFib3V0IHRoZSAvdGVhUm9vbS8=     
-   its base64 after decoding it gives 
-        How about the /teaRoom/
+   In The Source code of Dining room there is a hash. 
+                 
+    SG93IGFib3V0IHRoZSAvdGVhUm9vbS8=     
+   It is a base64 after decoding it gives
+        "How about the /teaRoom/"
  
  TEA ROOM:
     Barry give Jill a Lockpick.
@@ -51,41 +52,41 @@ TASK 1 "THE MANSION":
  MANSION MAP:
       Location:
      /diningRoom/
-     /teaRoom/
-     /artRoom/
-     /barRoom/
-     /diningRoom2F/
-     /tigerStatusRoom/
-     /galleryRoom/
-     /studyRoom/
-     /armorRoom/
-     /attic/
+      /teaRoom/
+      /artRoom/
+      /barRoom/
+      /diningRoom2F/
+      /tigerStatusRoom/
+      /galleryRoom/
+      /studyRoom/
+      /armorRoom/
+      /attic/
  BAR ROOM:
-     THERES A LINK WHICH WILL GIVE A BASE32 ENCODED STRING
+     
+  There is a link which will give you a base 32 encoded string
      NV2XG2LDL5ZWQZLFOR5TGNRSMQ3TEZDFMFTDMNLGGVRGIYZWGNSGCZLDMU3GCMLGGY3TMZL5 
 
-     After decoding we get music sheet flag!
+     After decoding it you get music sheet flag!
      music_sheet{362d72deaf65f5bdc63daece6a1f676e} 
      
- ENTERING THE MUSIC SHEET FLAG IN THE BAR ROOM GIVEN SPACE
- SECRET BAR ROOM
+ Entering the music sheet Flag in the bar room given space you will be taken to a "SECRET BAR ROOM"
 
-     WE ENTER INTO A SECRET BAR ROOM!
+     
      There you will find a gold emblem flag
      gold_emblem{58a8c41a9d08b8a4e38d02a4d7ff4843}
      
      REFRESH THE PAGE
-     and enter the emblem flag and after submitting it u get "rebecca"
+     and enter the emblem flag and after submitting it you get "rebecca"
 
 SINCE THERE IS A EMBLEM SLOT IN DINING ROOM ONE 
 WE TRIED ENTRING THE OLD EMBLEM IT DIDINT WORKED
 LET'S ENTER THE GOLD EMBLEM THERE
 
-NOW WE GET A CIPHER TEXT
+Now you get a cipher text!
 klfvg ks r wimgnd biz mpuiui ulg fiemok tqod. Xii jvmc tbkg ks tempgf tyi_hvgct_jljinf_kvc
  
- DECODING IT GIVES US;
- there is a shield key inside the dining room. The html page is called the_great_shield_key
+ Decoding it gives you;
+ "there is a shield key inside the dining room. The html page is called the_great_shield_key"
 
     shield_key{48a7a9227cd7eb89f0a062590798cbac}
 

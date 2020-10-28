@@ -41,7 +41,7 @@ Running the bruforece on the login page via hydra and keeping the password const
 
  By bruteforce we find the username is: Elliot
 
-Now, passwordd bruteforce
+Now, password bruteforce
 
     hydra -l Elliot -P /home/ghost/tryhackme/mrrobot/fsocity.dic 10.10.173.126 http-post-form "/wp login.php:log=^USER^&PWD=^PWD^:The password you entered for the username" -t 30
 
@@ -52,7 +52,7 @@ go to archive.php in appereance section and
 upload the reverse shell php script
 
 GO TO THIS URL TO RUN THE SCRIPT:  
- http://10.10.164.231/wp-content/themes/twentyfifteen/archive.php
+ http://machine-ip/wp-content/themes/twentyfifteen/archive.php
 Then you will get a reverse shell on your terminal.
 
  After getting the reverse shell we move to home/robot

@@ -6,7 +6,7 @@ Link: https://tryhackme.com/room/tartaraus
 
 TARGET IP: 10.10.13.146
 
-*SCANNING
+*SCANNING*
 
   Nmap scan results:
     

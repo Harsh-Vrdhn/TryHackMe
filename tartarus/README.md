@@ -17,7 +17,7 @@ TARGET IP: 10.10.13.146
 *ENUMERATION
 
  ftp anonymous login is allowed and after logging in we go to ... and then again ... directory
- <img src="screeshots/ftplogin.png">
+ <img src="screenshots/ftplogin.png">
   we get /sUp3r-s3cr3t directory 
 
  

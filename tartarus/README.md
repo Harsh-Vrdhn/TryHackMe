@@ -1,21 +1,23 @@
+# Tartarus
+
 Room: Tartarus
+
 Link: https://tryhackme.com/room/tartaraus
+
 TARGET IP: 10.10.13.146
-SCANNING
 
-  NMAP SCAN RESULTS:
-     21/tcp open  ftp     vsftpd 3.0.3
-     22/tcp open  ssh     OpenSSH 7.2p2 
-     80/tcp open  http    Apache httpd 2.4.18
+*SCANNING
 
-ENUMERATION
+  Nmap scan results:
+    
+    21/tcp open  ftp     vsftpd 3.0.3
+    22/tcp open  ssh     OpenSSH 7.2p2 
+    80/tcp open  http    Apache httpd 2.4.18
 
- ftp anonymous login is allowed.
-   
+*ENUMERATION
 
-  go to ... and then again ...
-  
-
+ ftp anonymous login is allowed and after logging in we go to ... and then again ... directory
+ <img src="screeshots/ftplogin.png">
   we get /sUp3r-s3cr3t directory 
 
  

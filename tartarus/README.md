@@ -1,5 +1,7 @@
 # Tartarus
 
+<img src="screenshots/1.jpg">
+
 Room: Tartarus
 
 Link: https://tryhackme.com/room/tartaraus
@@ -19,8 +21,11 @@ TARGET IP: 10.10.13.146
  ftp anonymous login is allowed and after logging in we go to ... and then again ... directory
  <img src="screenshots/ftplogin.png">
   
+  There we see a txt file and downloading it on our machine we get /sUp3r-s3cr3t directory. We will have a look at this directory later first we will further enumerate the machine.
   
-  we get /sUp3r-s3cr3t directory 
+  <img src="screenshots/ftpdirectory.png">
+  
+  <img src="screenshots/yougot.png">
 
  
  Checking the robots.txt file(a random guess) 
@@ -53,13 +58,13 @@ Entering into /admin-dir
      
   Uploading the reverse shell php script on the page. 
   
-    Download the script from here:http://pentestmonkey.net/tools/php-reverse-shell/php-reverse-shell-1.0.tar.gz
+    Download the script from here: http://pentestmonkey.net/tools/php-reverse-shell/php-reverse-shell-1.0.tar.gz
 
-we need to find the uploads directory to run our script
-Now we run the directory scan 
- 
- So we find the images directory with dirb and here is the upload folder open it and run the script.
- Now we got our reverse shell.
+We need to find the uploads directory to run our script for that we run the directory scan. 
+So we find the images directory with dirb and here is the upload folder open it and run the script.
+Now we got our reverse shell.
+
+<img src="screenshots/revshell.png">
 
   Going to home/d4rckh.  
   We get the user flag! 0f7dbb2243e692e3ad222bc4eff8521f

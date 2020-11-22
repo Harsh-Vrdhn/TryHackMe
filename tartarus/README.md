@@ -54,7 +54,7 @@ Entering into /admin-dir
     After logging in we get into home.php where we can upload files. Uploading the script for reverse shell here. And starting the listener
     on the machine.
 
-     <img src="screenshots/upload.png">
+ <img src="screenshots/upload.png">
      
   Uploading the reverse shell php script on the page. 
   

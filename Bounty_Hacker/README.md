@@ -7,6 +7,7 @@ Machine IP: 10.10.187.209
 
 ### Scanning
 Nmap scan results:
+
    21/tcp    open   ftp (Anonymous login allowed)
    
    22/tcp    open   ssh   

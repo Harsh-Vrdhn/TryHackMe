@@ -34,7 +34,7 @@ Using the wget command we download the id_rsa file and now we have to crack it u
 
 Logging into ssh via the above found credentials but first of all we have to change our id_rsa files permissions for that we type 'chmod 600 id_rsa'.
     
-<img src="screemshots/sshlogin.png"
+<img src="screenshots/sshlogin.png">
 
 Now, cat user.txt and we have our user flag: THM{a_password_is_not_a_barrier}
 

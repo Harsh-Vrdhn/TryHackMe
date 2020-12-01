@@ -8,6 +8,7 @@ Machine IP: 10.10.55.197
 
 ### Recon 
 <h4> Nmap Scan </h4>
+
 21/tcp open  ftp
 
 22/tcp open  ssh
@@ -16,7 +17,7 @@ Machine IP: 10.10.55.197
 
 Also during nmap scan we see that anonymous login is allowed so we will take a look at that in a min but first let's have a look at dirb scan.
 
-<h4> Dirb Scan <h5>
+<h4> Dirb Scan </h4>
 
 Dirb scan gives us a directory named files.
   
